@@ -39,7 +39,7 @@ document.getElementById('submit4').addEventListener('click', function(event) {
     const inputValue = document.getElementById('finishquestion-text').value.trim().toLowerCase();
 
     // Verifica se a resposta está correta
-    if (inputValue === "23, 9, 8, 8, 3, 8, 6, 5, 4, 3, 9, 7, 9, 6, 1, 4, 6, 3, 0, 5, 4, 1, 5, 2, 4, 8, 2, 2, 4, 0, 4, 4") {
+    if (inputValue === "23, 9, 8, 8, 3, 8, 6, 5, 4, 3, 9, 7, 9, 6, 1, /, 46, 3, 0, 5, 4, 1, 5, 2, 4, 8, 2, 2, 4, 0, 4, 4") {
         // Se estiver correta, oculta a seção de localização
         document.getElementById('location').classList.add('hidden');
         // Mostra a mensagem final
@@ -56,18 +56,18 @@ document.getElementById('submit4').addEventListener('click', function(event) {
     }
 });
 
-// Função para preencher o mapa com as coordenadas corretas
-function fillMap() {
-    const correctNumbers = [
-        23, 9, 8, 8, 3, 8, 6, 5, 4, 3, 9, 7, 9, 6, 1,
-        4, 6, 3, 0, 5, 4, 1, 5, 2, 4, 8, 2, 2, 4, 0, 4, 4
-    ];
+document.addEventListener('DOMContentLoaded', function() {
+    // Exibir botão de preencher resposta após 10 segundos
+    setTimeout(() => {
+        const fillAnswerButton = document.getElementById('fill-answer');
+        fillAnswerButton.classList.remove('hidden');
+    }, 1000000); // 10 segundos
 
-    // Seleciona todos os inputs de número do mapa
-    const letterInputs = document.querySelectorAll('.letter-input');
-    
-    // Preenche os inputs com as coordenadas corretas
-    letterInputs.forEach((input, index) => {
-        input.value = correctNumbers[index];
+    // Preencher input com a resposta correta se não estiver preenchido
+    document.getElementById('fill-answer').addEventListener('click', function() {
+        const finishInput = document.getElementById('finishquestion-text');
+        if (!finishInput.value.trim()) {
+            finishInput.value = '23, 9, 8, 8, 3, 8, 6, 5, 4, 3, 9, 7, 9, 6, 1, /, 46, 3, 0, 5, 4, 1, 5, 2, 4, 8, 2, 2, 4, 0, 4, 4'; // Substitua pela resposta correta
+        }
     });
-}
+});
