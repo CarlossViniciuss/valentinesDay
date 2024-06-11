@@ -71,3 +71,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Mostra o loading
+function showLoading() {
+    document.getElementById('loading').classList.remove('hidden');
+}
+
+// Esconde o loading
+function hideLoading() {
+    document.getElementById('loading').classList.add('hidden');
+}
+
