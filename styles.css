@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
@@ -10,16 +12,22 @@ body {
 }
 
 .container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 90%;
-    margin: 0 auto; /* Centraliza o container na página */
-    max-height: 90vh; /* Define a altura máxima como 90% da altura da tela */
-    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando o conteúdo ultrapassa a altura máxima */
-    width: 1000px;
+    margin: 0 auto;
+    max-height: 90vh;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
 }
 
 .hidden {
@@ -27,33 +35,39 @@ body {
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     margin-top: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     background-color: #ff6f61;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
     background-color: #e55b52;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 input {
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     width: calc(100% - 24px);
     border: 2px solid #ff6f61;
-    border-radius: 5px;
+    border-radius: 25px;
     box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1em;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 input:focus {
     border-color: #e55b52;
     outline: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .question {
@@ -75,35 +89,39 @@ input:focus {
     font-size: 1.2em;
     font-weight: bold;
     color: #ff6f61;
+    margin-top: 20px;
 }
 
 .poem {
     text-align: left;
-    padding: 10px;
+    padding: 20px;
     overflow: auto;
     line-height: 1.6;
-    width: calc(50% - 20px);
-    display: inline-block;
-    vertical-align: top;
+    width: 100%;
     box-sizing: border-box;
-    margin: 0 auto; /* Adiciona margem automática esquerda e direita para centralizar */
+    margin: 10px auto;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .letter-input {
-    width: 40px;
+    width: 50px;
     display: inline-block;
     vertical-align: middle;
     margin-left: 10px;
+    border-radius: 10px;
+    border: 2px solid #ff6f61;
+    padding: 5px;
+    text-align: center;
 }
 
 input[type=number]::-webkit-inner-spin-button { 
     -webkit-appearance: none;
-    
 }
 input[type=number] { 
-   -moz-appearance: textfield;
-   appearance: textfield;
-
+    -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 .error-message {
@@ -116,6 +134,14 @@ input.invalid {
     border-color: red;
 }
 
+@media screen and (min-width: 768px) {
+    .poem {
+        width: calc(50% - 20px);
+        height: 800px;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .container {
@@ -139,4 +165,3 @@ input.invalid {
         width: 100%;
     }
 }
-
