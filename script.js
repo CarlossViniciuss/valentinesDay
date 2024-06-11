@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         const fillAnswerButton = document.getElementById('fill-answer');
         fillAnswerButton.classList.remove('hidden');
-    }, 1000000); // 10 segundos
+    }, 60000);
 
     // Preencher input com a resposta correta se não estiver preenchido
     document.getElementById('fill-answer').addEventListener('click', function() {
