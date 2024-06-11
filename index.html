@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia dos Namorados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Te amo minha Mega Special Girl</h1>
+
+        <div id="quiz">
+            <div class="question" id="question1">
+                <p>Onde nos conhecemos?</p>
+                <input type="text" id="answer1" placeholder="Digite sua resposta aqui">
+                <span class="error-message"></span>
+                <button id="submit1">Enviar Resposta</button>
+            </div>
+            
+            <div class="question hidden" id="question2">
+                <p>Nossa primeira viagem juntos?</p>
+                <input type="text" id="answer2" placeholder="Digite sua resposta aqui">
+                <span class="error-message"></span>
+                <button id="submit2">Enviar Resposta</button>
+            </div>
+
+            <div class="question hidden" id="question3">
+                <p>Aniversário de namoro?</p>
+                <input type="text" id="answer3" placeholder="Digite sua resposta aqui">
+                <span class="error-message"></span>
+                <button id="submit3">Enviar Resposta</button>
+            </div>
+
+            <div id="poem-container" class="hidden">
+                <div id="poem1" class="poem">
+                    <input type="number" class="letter-input" maxlength="2"> <strong>W</strong>hispers dos ventos na noite calma,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>I</strong>magine sonhos que a lua aclama.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>H</strong>orizontes de esperança se erguem,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>H</strong>armonia na noite, os anseios se extinguem.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>C</strong>riando memórias nas águas cristalinas,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>H</strong>ora de paz, nas estrelas divinas.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>F</strong>ogo da paixão em chamas acesas,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>E</strong>ternos laços, em noites repletas.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>D</strong>ançam sombras à luz da lua cheia,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>C</strong>onstelações brilham, a noite semeia.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>I</strong>nfindáveis caminhos no céu se espraiam,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>G</strong>uia do amor, onde estrelas nos guiam.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>I</strong>ncessante é o cantar do universo,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>F</strong>undidos para sempre, em elo inverso.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>A</strong>melodia das almas na vastidão,<br>
+                    Para sempre unidas, em eterna união.<br>
+                </div>
+                <div id="poem2" class="poem hidden">
+                    <input type="number" class="letter-input" maxlength="2"> <strong>D</strong>ançam os sonhos, na brisa da manhã,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>F</strong>loração das flores, em harmonia tão sã.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>C</strong>riaturas da natureza, em dança no bosque,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>O</strong>destino incerto, como um jogo de xadrez.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>E</strong>ternos suspiros, nas noites de luar,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>D</strong>onde os desejos se entregam ao mar.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>A</strong>luz do amanhecer, beija o horizonte,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>E</strong>nfim o sol nasce, em seu monte.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>B</strong>rilham as estrelas, no céu tão distante,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>D</strong>ançam as almas, num eterno romance.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>H</strong>orizontes se expandem, além da visão,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>B</strong>ondade sem fim, no coração.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>B</strong>astante é o mistério, que o universo traz,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>D</strong>estinos entrelaçados, em sua paz.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>O</strong>lhar para o céu, onde o infinito se esconde,<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>D</strong>escobre-se a verdade, onde tudo responde.<br>
+                    <input type="number" class="letter-input" maxlength="2"> <strong>D</strong>ança a vida, num eterno fluxo,<br>
+                    Cada momento único, um novo barco.<br>
+                </div>
+            </div>
+            
+            <div id="location" class="hidden">
+                <p>Use os quadrados como uma cola (pode digitar os numeros que voce acredita que sejam ali).</p>
+                <p>A uma dica irei te dar</p>
+                <p>
+                    "Caminho por entre as letras,<br>
+                    Oculto nas palavras eu estou.<br>
+                    Os sons do meu segredo ecoam.<br>
+                    <br>
+                    Entre as primeiras letra de cada linha,<br>
+                    O mistério se revelará.<br>
+                    Uma jornada de letras se inicia,<br>
+                    Na resposta final, o destino irá te guiar."<br>
+                    <br>
+                    <strong>Onde estou eu?</strong> 
+                </p>
+                <div class="question" id="finishquestion">
+                    <input type="text" id="finishquestion-text" placeholder="Digite sua resposta aqui">
+                    <span class="error-message"></span>
+                    <button id="submit4">Enviar Resposta</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="final-message" class="hidden">
+            <p>Feliz dia que sera seu todo dia. Te amo ❤️</p>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0DZy6nJdqvHSeobBaOBJI6?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <p> É Chorão ela continua linda e continua bela então: "Vem ser minha namorada ❤️"</p>
+            <p>Essa musica que eu amo cantar pra você te amo minha mega special girl, meu sonho mais incrivel</p>
+            <br>
+            <p>Aproveita e joga esses numeros no Waze 👀</p>
+        </div>
+
+        <p>La seconda parte te la do in un vasto luogo fiorito dove nel sole indica una mano</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

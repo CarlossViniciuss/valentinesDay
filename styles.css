@@ -1,0 +1,142 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto; /* Centraliza o container na página */
+    max-height: 90vh; /* Define a altura máxima como 90% da altura da tela */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando o conteúdo ultrapassa a altura máxima */
+    width: 1000px;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e55b52;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    width: calc(100% - 24px);
+    border: 2px solid #ff6f61;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #e55b52;
+    outline: none;
+}
+
+.question {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#final-message {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+.poem {
+    text-align: left;
+    padding: 10px;
+    overflow: auto;
+    line-height: 1.6;
+    width: calc(50% - 20px);
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin: 0 auto; /* Adiciona margem automática esquerda e direita para centralizar */
+}
+
+.letter-input {
+    width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    display: none;
+}
+
+input.invalid {
+    border-color: red;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .poem {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .container {
+        width: 100%;
+    }
+}
+
