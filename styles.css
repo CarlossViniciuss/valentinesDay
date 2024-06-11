@@ -135,7 +135,7 @@ input:focus {
 }
 
 .letter-input {
-    width: 40px;
+    width: 50px;
     display: inline-block;
     vertical-align: middle;
     margin-left: 10px;
@@ -224,7 +224,23 @@ input.invalid {
 
 @media screen and (max-width: 428px) {
     .container {
-        width: 95%;
-        padding: 10px 15px;
+        width: 100%;
+        padding: 5px 10px;
+    }
+
+    input {
+        font-size: 12px; /* Ajusta o tamanho da fonte para dispositivos muito pequenos */
+        padding: 5px;
+    }
+
+    .letter-input {
+        width: 25px; /* Ajustado para telas muito pequenas */
+        font-size: 16px; /* Ajusta o tamanho da fonte para o input */
+    }
+
+    button {
+        font-size: 0.7em; /* Ajusta o tamanho do botão */
+        padding: 10px 50px;
+        margin-bottom: 20px;
     }
 }
